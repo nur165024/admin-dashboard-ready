@@ -6,7 +6,7 @@
 </div>
 <ul class="app-menu">
     <li>
-        <a class="app-menu__item active" href="{{ route('admin.dashboard') }}">
+        <a class="app-menu__item {{ Route::currentRouteName() == 'admin.dashboard' ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">
             <i class="app-menu__icon fa fa-dashboard"></i>
             <span class="app-menu__label">Dashboard</span></a>
     </li>
@@ -15,6 +15,13 @@
         <a class="app-menu__item" href="javascript:void(0);">
             <i class="app-menu__icon fa fa-pie-chart"></i>
             <span class="app-menu__label">Charts</span>
+        </a>
+    </li>
+
+    <li>
+        <a class="app-menu__item {{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}" href="{{ route('admin.settings') }}">
+            <i class="app-menu__icon fa fa-cogs"></i>
+            <span class="app-menu__label">Settings</span>
         </a>
     </li>
 
